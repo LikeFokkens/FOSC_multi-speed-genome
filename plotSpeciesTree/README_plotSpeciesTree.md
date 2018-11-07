@@ -1,6 +1,6 @@
 ### Prune and plot a species tree
 
-* WRT species tree inference:*
+*WRT species tree inference:*  
 I selected 'core genes' in Fol4287 (defined as genes located on core chromosomes, where core is defined wrt to _F. verticillioides_: hence excluding genes located on chr 1b, 2b, 3, 6, 14 and 15). I did a megaBLAST against genomic sequences (many genoems in our dataset are not annotated), and used quite arbitrary length and similarity cutoffs to include or exclude genes. All genes that had a single hit in all genomes in the dataset according to these cutoffs were included. For these genes and their BLAST hits, I inferred multi sequence alignments (MSAs) using Clustal Omega, concatenated the MSAs using a Python script and inferred a tree from the concatenated alignment. See van Dam et al 2016 (doi: 10.1111/1462-2920.13445).  
 
 I rooted the tree using _F. verticillioides_ as an outgroup.
