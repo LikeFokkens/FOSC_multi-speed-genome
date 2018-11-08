@@ -1,0 +1,12 @@
+# RNA-seq
+# RPKM
+awk -v OFS="\t" '{if (NR > 1) print $6, $8}' /Users/like/Dropbox/00.Projects/00.Three-speed-genome/03.RNAseq/analyses/notebooks/Table_RNAseq_withLocations.tab > in_planta_RPKM.tab 
+awk -v OFS="\t" '{if (NR > 1) print $6, $7}' /Users/like/Dropbox/00.Projects/00.Three-speed-genome/03.RNAseq/analyses/notebooks/Table_RNAseq_withLocations.tab > in_vitro_RPKM.tab 
+
+awk -v OFS="\t" '{if (NR > 1) print $6, $9}' /Users/like/Dropbox/00.Projects/00.Three-speed-genome/03.RNAseq/analyses/notebooks/Table_RNAseq_withLocations.tab > log2foldChange.tab
+
+# foldChange
+awk -v OFS="\t" '{if (NR > 1) print $6, $9}' /Users/like/Dropbox/00.Projects/00.Three-speed-genome/03.RNAseq/analyses/notebooks/Table_RNAseq_withLocations.tab > inVitro_vs_inPlanta_log2foldChange.tab 
+awk -v OFS="\t" '{if (NR > 1 && $10 != "nan" && $10 < 0.01) print $6, $9}' /Users/like/Dropbox/00.Projects/00.Three-speed-genome/03.RNAseq/analyses/notebooks/Table_RNAseq_withLocations.tab > inVitro_vs_inPlanta_log2foldChange_DEG.tab 
+
+awk -F "\t" -v OFS="\t" '{if (NR > 1 && $12 != "Not calculated" && $12 <= 1.0 && $13 <= 1.0) print $6,$12,$13,$14}' /Users/like/Dropbox/00.Projects/00.Three-speed-genome/04.natural_selection/Table_NaturalSelection_withLocations.tab > dN_dS_dNdS.tab
