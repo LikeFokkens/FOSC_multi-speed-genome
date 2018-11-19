@@ -19,7 +19,7 @@ This code is a bit old, before I started using argument parser on a regular basi
 `This script will compare all genomes in <dirname> to the <ref_genome.fasta>.`  
 `If the <ref_genome> is ommitted, it will compare all against all.`  
 `All output will be saved in <outdirname>/deltafiles, <outdirname>/coords, log files in <outdirname>/logs`  
-`fastas should end with ".fasta" or ".fa"`. 
+`fastas should end with ".fasta", "fna" or ".fa"`. 
 
 
 

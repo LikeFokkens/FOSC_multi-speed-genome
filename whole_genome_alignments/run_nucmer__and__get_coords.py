@@ -16,14 +16,14 @@ if len(sys.argv) == 1:
 	print('This script will compare all genomes in <dirname> to the <ref_genome.fasta>')
 	print('If the <ref_genome> is ommitted, it will compare all against all')
 	print('All output will be saved in <outdirname>/deltafiles, <outdirname>/coords, log files in <outdirname>/logs')
-	print('fastas should end with ".fasta" or ".fa"')
+	print('fastas should end with ".fasta", ".fna" or ".fa"')
 
 	sys.exit()
 	
 dirname    = sys.argv[1]
 fastafiles = [sys.argv[1]]							#
 if os.path.isdir(dirname):							#  added 2015 11 24
-	fastafiles = glob.glob(dirname + '/*.fasta') + glob.glob(dirname + '/*.fa')	#
+	fastafiles = glob.glob(dirname + '/*.fasta') + glob.glob(dirname + '/*.fa')	 + glob.glob(dirname + '/*.fna')#
 outdirname = sys.argv[2]
 
 if not os.path.exists(outdirname):                os.mkdir(outdirname)
