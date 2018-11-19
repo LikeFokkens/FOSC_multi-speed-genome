@@ -23,7 +23,7 @@ if len(sys.argv) == 1:
 dirname    = sys.argv[1]
 fastafiles = [sys.argv[1]]							#
 if os.path.isdir(dirname):							#  added 2015 11 24
-	fastafiles = glob.glob(dirname + '/*.fasta') + glob.glob(dirname + '/*.fa')	+ glob.glob(dirname + '/*.fna')#
+	fastafiles = glob.glob(dirname + '/*.fasta') + glob.glob(dirname + '/*.fa') + glob.glob(dirname + '/*.fna')#
 outdirname = sys.argv[2]
 
 if not os.path.exists(outdirname):                os.mkdir(outdirname)
