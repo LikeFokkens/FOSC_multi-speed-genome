@@ -172,8 +172,15 @@ def fasta2genomefile(fasta_fname, genome_fname = None, outdir = None):
 
 	if genome_fname == None:
 		genome_fname = fasta_fname.replace('.fasta', '.contig2size.tab')
+		if genome_fname == fasta_fname: 
+			genome_fname = fasta_fname.replace('.fa', '.contig2size.tab')
+		if genome_fname == fasta_fname: 
+			genome_fname = fasta_fname.replace('.fna', '.contig2size.tab')
+		if genome_fname == fasta_fname: 
+			genome_fname = fasta_fname+'.contig2size.tab'
 		if outdir != None:
 			genome_fname = outdir + genome_fname.split('/')[-1]
+
 
 	id2seq, id2header = fasta2dicts(open(fasta_fname))
 	total = 0
