@@ -84,7 +84,7 @@ def get_datfiles(coordsfiles, Rname, name, id2xstart, minsim, minlength, datdirn
 	for Qindex, coords_fname in enumerate(coordsfiles):
 		#print('coordfile', coords_fname)
 		#coords_fname        = coords_dirname+'/'+Rname+'.vs.'+Qname+postfix
-		Qname = coords_fname.split('/')[-1].split('.')[2]
+		Qname = coords_fname.split('/')[-1].split('.vs.')[1].split(postfix)
 		coords_fname_sorted = ''
 
 		# sort so that the alignments with the heighest alignment length or %identity are plotted last (on top of 'worse' alignments)
