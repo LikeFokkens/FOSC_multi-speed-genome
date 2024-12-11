@@ -135,7 +135,7 @@ def write_datFile(coords_fname, minL, minSim, dat_fname, includeX=[], includeY=[
 	else:
 		if no_diagonal:
 			Q_idlist, Q_id2length, Q_id2xstart = plot_tools.get_idlist_id2length_and_id2xstart(Qfasta_fname, idlist = [], size_sorted = True, complete_idlist = True, min_contig_size = 0, splitheader = True, exclude = set([]))
-		elif len(includey) > 0:
+		elif len(includeY) > 0:
 			Q_idlist, Q_id2length, Q_id2xstart = plot_tools.get_idlist_id2length_and_id2xstart(Qfasta_fname, idlist = includeY, size_sorted = False, complete_idlist = False)
 		else:
 			#get order of Q scaffolds so we come as close to a diagonal as possible:
