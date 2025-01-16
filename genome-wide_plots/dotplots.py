@@ -249,7 +249,7 @@ def write_gnufile(datfilename, outdirname, plotname, min_sim, min_length, R_idli
 	gnulines += '\n\nexit()\n'
 
 	#write instruction for gnuplot to a file:
-	gnu_fname = outdirname + '/GNUFILES/'+file_prefix+'.gnu'
+	gnu_fname = outdirname + '/gnufiles/'+file_prefix+'.gnu'
 	gnufile   = open(gnu_fname, 'w')
 	gnufile.write(gnulines)
 	gnufile.close()
